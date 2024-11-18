@@ -1,0 +1,145 @@
+:root {
+  --primary: rgb(190, 86, 104);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #eee;
+  font-family: "Poppins";
+  background-image: url("/image/bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.animate-on-scroll {
+  opacity: 0; /* Elemen tersembunyi secara default */
+  transform: translateY(50px); /* Elemen mulai dari posisi sedikit ke bawah */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.animate-on-scroll.visible {
+  opacity: 1; /* Elemen menjadi terlihat */
+  transform: translateY(0); /* Kembali ke posisi normal */
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 1rem;
+  gap: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+.playMusicBtn:hover {
+  background-color: white;
+  border-radius: 20px;
+  color: black;
+}
+.card {
+  position: relative;
+  width: 300px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  height: 330px;
+  background-color: lightgray;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+.music-box {
+  background-color: var(--primary);
+  width: 350px;
+  height: 80px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1em;
+  padding: 1em;
+  color: white;
+}
+.music-box img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.music-function {
+  display: flex;
+  gap: 10px;
+}
+.music-function div {
+  display: inline-flex;
+  align-items: center;
+}
+.music-caption span {
+  font-weight: 300;
+}
+.music-caption h6 {
+  font-weight: 500;
+}
+.music-function div:nth-child(2) {
+  gap: 2px;
+}
+.message-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 10px;
+}
+.message-card {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  max-width: 250px;
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+}
+.cta {
+  padding: 8px 20px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.cta-surat {
+  margin: 10rem 0;
+  background-color: var(--primary);
+  color: white;
+}
+.music-function div i {
+  font-size: 1.2em;
+}
+.music-function div i:hover {
+  cursor: pointer;
+}
+.album-container {
+  columns: 5 200px;
+  column-gap: 10px;
+}
+.album-container img {
+  width: 200px;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
